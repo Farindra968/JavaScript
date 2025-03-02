@@ -127,7 +127,8 @@ In JavaScript, NaN stands for "Not-a-Number". It is a special value that represe
 - Let
 
     let (Block-scoped & Mutable)
-    - Block-scoped (exists only inside {} blocks).- Can be updated, but not re-declared in the same scope.
+    - Block-scoped (exists only inside {} blocks).
+    - Can be updated, but not re-declared in the same scope.
     - Hoisted but not initialized.
         
             example:

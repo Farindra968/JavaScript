@@ -1,105 +1,127 @@
 
 # Variables
 
-Variable is the container containing the data with the specific name. Or a name of the storage location.
+Variable is the container containing the data with a specific name, or a name of the storage location.
 
-    example: 
-    
-        let name = 'Hari'
-        let age = 23
-    
-    :: "name", "age" is the variable
+```javascript
+let name = 'Hari';
+let age = 23;
+```
 
+- `name`, `age` are variables.
 
-# DataType
-There are 2 types of Datatype.
+## DataType
+There are 2 types of Datatype:
 1. Primitive DataType
-2. Non Primitive DataType
+2. Non-Primitive DataType
 
-- Primitive DataType.
-    
-    a. Number
+### Primitive DataType
 
-        example:
-            let age= 20,
-            let mark = 60,
-        
-        :: above code is the example of number datatype. It do not contain any alphabet, symbol, etc. pure number only. 
-        Number include;
-            a. Positive & Negative (4, -6),
-            b. Floating or Decimal Number (4.5, -5.2),
-            c. Integers (20, -5)
+#### a. Number
 
-    b. String
+```javascript
+let age = 20;
+let mark = 60;
+```
 
-        example: 
-            let fullName = 'Jack Paul',
-            let address = "New York, 4th street"
-        
-        :: above code is the example of string datatype. It can contain number, symbol. String datatype can be identified by the quote '', or double quote "".
-    
-    c. Boolean:
+- The above code is an example of the number datatype. It does not contain any alphabet, symbol, etc. It includes:
+  - Positive & Negative Numbers (4, -6)
+  - Floating or Decimal Numbers (4.5, -5.2)
+  - Integers (20, -5)
 
-        example:
-            let ispass = true;
-            let isAdult = false;
-        
-        :: above is the boolean datattype. It only give the answer or result in true (1) or false (0)
+#### b. String
 
-    d. Bignit:
+```javascript
+let fullName = 'Jack Paul';
+let address = "New York, 4th street";
+```
 
-        example:
-            let turnOver = 21025586689689;
+- The above code is an example of the string datatype. It can contain numbers, symbols, and can be identified by single (`''`) or double (`""`) quotes.
 
-        :: above code is the Bignit datatype. Bignit datatype is also similar to number type but, Bignit datatype contain large number. Bignit datatype is mainly used in stockMarket, etc
+#### c. Boolean
 
-    e. Undeined:
+```javascript
+let isPass = true;
+let isAdult = false;
+```
 
-        example: 
-            let name= ;
-        
-        :: Undefined is the type of datatype, where variable is defined but its data is not defined
-    
-    f. Null
+- Boolean datatype only returns `true (1)` or `false (0)`.
 
-    g. Symbol.
+#### d. BigInt
 
-# Operation in JS
-- Addition Operation (+):
-        
-        example: 
-            let a = 5,
-            let b= 6,
-            console.log(a+b)
-        
-        Output= 5+6 = 11
+```javascript
+let turnOver = 21025586689689n;
+```
 
-- Subtraction Operation (-):
+- The above code is a BigInt datatype. It is similar to number type but is used to store very large numbers, mainly used in stock markets, etc.
 
-        example: 
-            let a= 5,
-            let b= 3,
-            console.log(a-5);
-        
-        Output =  5-3 = 2
+#### e. Undefined
 
-- Multiplication Operation (*):
+```javascript
+let name;
+```
 
-        example: 
-             let a= 3,
-             let b = 4,
-             console.log(a*b);
-        
-        Output = 3*4 = 12
+- Undefined is a type of datatype where a variable is declared but its value is not assigned.
 
-- Division Operation (/):
+#### f. Null
 
-        example: 
-            let a = 6,
-            let b = 2,
-            console.log(a/b);
+```javascript
+let value = null;
+```
 
-        Output = 6/2 = 3  
+- Null is an empty or unknown value.
+
+#### g. Symbol
+
+```javascript
+let symbol1 = Symbol("id");
+let symbol2 = Symbol("id");
+```
+
+- Symbols are unique and immutable.
+
+## Operations in JavaScript
+
+### Addition Operation (`+`):
+
+```javascript
+let a = 5;
+let b = 6;
+console.log(a + b);
+```
+
+**Output:** `5 + 6 = 11`
+
+### Subtraction Operation (`-`):
+
+```javascript
+let a = 5;
+let b = 3;
+console.log(a - b);
+```
+
+**Output:** `5 - 3 = 2`
+
+### Multiplication Operation (`*`):
+
+```javascript
+let a = 3;
+let b = 4;
+console.log(a * b);
+```
+
+**Output:** `3 * 4 = 12`
+
+### Division Operation (`/`):
+
+```javascript
+let a = 6;
+let b = 2;
+console.log(a / b);
+```
+
+**Output:** `6 / 2 = 3`
+
 
 <table >
     <tr>
@@ -237,15 +259,13 @@ There are 2 types of Datatype.
 
 # NAN in JS
 In JavaScript, NaN stands for "Not-a-Number". It is a special value that represents an invalid or undefined numerical result. NaN type is also Number but provide Invalid or undefined numerical output.
-
-    example: 
-        console.log(0/0) // NaN
-        console.log(undefined+1) // NaN
-        console.log(Math.floor("Hello")) // NaN
-        console.log(parseInt("Hi")) // NaN
-
-        console.log(typeof NaN) // Number type
-
+```javascript        
+console.log(0/0) // NaN
+console.log(undefined+1) // NaN
+console.log(Math.floor("Hello")) // NaN
+console.log(parseInt("Hi")) // NaN
+console.log(typeof NaN) // Number type
+```
 
 
 
@@ -265,11 +285,11 @@ In JavaScript, NaN stands for "Not-a-Number". It is a special value that represe
     - Can be updated, but not re-declared in the same scope.
     - Hoisted but not initialized.
         
-            example:
-                a= 5, //write but not good ways to declare.
-                let a= 5,
-                let name= "Jack"
-
+```javascript
+a= 5, //write but not good ways to declare.
+let a= 5,
+let name= "Jack"
+```
 - Const
 
     const (Block-scoped & Immutable)
@@ -277,10 +297,10 @@ In JavaScript, NaN stands for "Not-a-Number". It is a special value that represe
     - Cannot be re-assigned variable (but objects/arrays inside can change).
     - Must be initialized at declaration.
 
-            example:
-                let age = 20,
-                 age=30 // wrong cannot reassigned 
-
+```javascript
+let age = 20,
+age=30 // wrong cannot reassigned 
+```
 # Assignment operator
 Assignment operator is used to assign values to variables. The most common assignment operator is =;
     
@@ -308,19 +328,147 @@ Assignment operator is used to assign values to variables. The most common assig
 # Uninary Operator
 Uninary Operator is a simple and shortcut method to do  Operation in Javascript.
 
-        example:
+```javascript
             let age = 10,
             age = age + 1 value 
             age +=1  
+```
 if we want to increase the value by 1 then simply we can use increment operator:
         
-        example:
+```javascript
             let age= 10;
             age++, // 10+1
             age++, //11+1
+```
 Similarly if we want to decrease the value by 1 then simply we can use decrement operator:
 
-        example:
-            let mark = 50,
-            mark --, // 50-1 =49
-            mark --, // 49-1 =48
+```javascript
+let mark = 50,
+mark --, // 50-1 =49
+mark --, // 49-1 =48
+```
+
+# JavaScript String Methods
+
+JavaScript provides several built-in string methods to manipulate and work with strings. Here are some commonly used string methods:
+
+## 1. Basic String Methods
+
+### **String Length**
+
+```js
+let str = "Hello, World!";
+console.log(str.length); // 13
+```
+
+### **toUpperCase() & toLowerCase()**
+
+```js
+console.log(str.toUpperCase()); // "HELLO, WORLD!"
+console.log(str.toLowerCase()); // "hello, world!"
+```
+
+### **charAt(index)**
+
+```js
+console.log(str.charAt(0)); // "H"
+```
+
+### **indexOf() & lastIndexOf()**
+
+```js
+console.log(str.indexOf("o")); // 4 (first occurrence)
+console.log(str.lastIndexOf("o")); // 8 (last occurrence)
+```
+
+### **includes()**
+
+```js
+console.log(str.includes("World")); // true
+console.log(str.includes("world")); // false (case-sensitive)
+```
+
+## 2. Extracting Substrings
+
+### **slice(start, end)**
+
+```js
+console.log(str.slice(7, 12)); // "World"
+```
+
+### **substring(start, end)**
+
+```js
+console.log(str.substring(7, 12)); // "World"
+```
+
+### **substr(start, length)**
+
+```js
+console.log(str.substr(7, 5)); // "World"
+```
+
+## 3. Modifying Strings
+
+### **replace()**
+
+```js
+console.log(str.replace("World", "JavaScript")); // "Hello, JavaScript!"
+```
+
+### **replaceAll()** (ES2021+)
+
+```js
+console.log("Hello Hello".replaceAll("Hello", "Hi")); // "Hi Hi"
+```
+
+### **trim(), trimStart(), trimEnd()**
+
+```js
+let text = "   Hello, World!   ";
+console.log(text.trim()); // "Hello, World!"
+console.log(text.trimStart()); // "Hello, World!   "
+console.log(text.trimEnd()); // "   Hello, World!"
+```
+
+## 4. Splitting and Joining
+
+### **split()**
+
+```js
+let words = str.split(", ");
+console.log(words); // ["Hello", "World!"]
+```
+
+### **concat()**
+
+```js
+let str1 = "Hello";
+let str2 = "World";
+console.log(str1.concat(", ", str2)); // "Hello, World"
+```
+
+## 5. Repeating and Padding
+
+### **repeat()**
+
+```js
+console.log("Ha".repeat(3)); // "HaHaHa"
+```
+
+### **padStart() & padEnd()**
+
+```js
+let num = "5";
+console.log(num.padStart(3, "0")); // "005"
+console.log(num.padEnd(3, "0")); // "500"
+```
+
+## 6. String to Array
+
+### **Array.from()**
+
+```js
+console.log(Array.from("Hello")); // ['H', 'e', 'l', 'l', 'o']
+```
+
